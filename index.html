@@ -15,6 +15,7 @@
       <a href="causes.html">Causes</a>
       <a href="govt-initiatives.html">Govt. Initiatives</a>
       <a href="solutions.html">Solutions</a>
+      <a href="#preparedness-planner">Preparedness Planner</a>
       <a href="aid.html">Aid & NGOs</a>
     </div>
   </nav>
@@ -26,7 +27,7 @@
       <div class="hero-badge">
         <span>Monsoon, Climate & Vulnerability</span>
       </div>
-      <h1>Floods in Pakistan: website made by Tooba Shoaib</h1>
+      <h1>Floods in Pakistan: From Disaster to Resilience</h1>
       <p class="lead">
         Pakistan faces recurring and increasingly intense floods, driven by heavy monsoon rains,
         melting glaciers and climate change. The 2022 "mega-floods" affected tens of millions
@@ -79,7 +80,7 @@
     </div>
 
     <aside class="hero-aside">
-      <img src="flood-hero.jpg" alt="Flood affected area in Pakistan showing submerged houses">
+      <img src="images/flood-hero.jpg" alt="Flood affected area in Pakistan showing submerged houses">
     </aside>
   </section>
 
@@ -181,6 +182,66 @@
       </a>
     </div>
   </section>
+    <section class="section" id="preparedness-planner">
+  <div class="section-header">
+    <h2>Flood Preparedness Planner</h2>
+    <p class="section-tagline">
+      Create a personalized preparedness plan for your household.
+    </p>
+  </div>
+
+  <div class="planner-card">
+    <p class="planner-intro">
+      Answer a few questions to receive a personalized list of steps that can
+      help your household prepare for possible flooding.
+    </p>
+
+    <form id="preparednessForm">
+      <div class="planner-form-group">
+        <label for="householdSize">Number of people in your household</label>
+        <input
+          type="number"
+          id="householdSize"
+          min="1"
+          max="20"
+          value="4"
+          required
+        >
+      </div>
+
+      <div class="planner-form-group">
+        <label for="riskLevel">Estimated flood risk level</label>
+        <select id="riskLevel" required>
+          <option value="low">Low</option>
+          <option value="medium" selected>Medium</option>
+          <option value="high">High</option>
+        </select>
+      </div>
+
+      <div class="planner-form-group">
+        <label for="areaType">Type of area</label>
+        <select id="areaType" required>
+          <option value="urban">Urban</option>
+          <option value="rural">Rural</option>
+          <option value="coastal">Coastal</option>
+        </select>
+      </div>
+
+      <div class="planner-checkbox">
+        <label>
+          <input type="checkbox" id="accessibilitySupport">
+          Someone in the household may need additional accessibility support.
+        </label>
+      </div>
+
+      <button type="submit" class="planner-button">
+        Create My Preparedness Plan
+      </button>
+    </form>
+
+    <div id="planResult" class="plan-result" aria-live="polite"></div>
+  </div>
+</section>
 </main>
 
 <footer>
@@ -193,6 +254,4 @@
 <script src="script.js"></script>
 
 </body>
-
 </html>
-
